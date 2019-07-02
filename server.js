@@ -2,12 +2,12 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const mongoose = require('mongoose');
 const schema = require('./server/schema/schema');
-const cors = require('cros');
+const cors = require('cors');
 
 const app = express();
 
 //allow cross-origin requests
-app.use(cros());
+app.use(cors());
 
 
 mongoose.connect('mongodb+srv://graphql_bookAuthor:6DHtXGuSxtmCe3N4@devmern-bfjzi.mongodb.net/Graphql?retryWrites=true&w=majority', { useNewUrlParser: true })
