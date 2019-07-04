@@ -15,7 +15,7 @@ class App extends Component {
       <ApolloProvider client={client}>
         <div id="main">
           <BookList />
-          <AddBook/>t
+          <AddBook />t
         </div>
       </ApolloProvider>
     )

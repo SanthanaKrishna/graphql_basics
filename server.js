@@ -11,11 +11,11 @@ app.use(cors());
 
 
 mongoose.connect('mongodb+srv://graphql_bookAuthor:6DHtXGuSxtmCe3N4@devmern-bfjzi.mongodb.net/Graphql?retryWrites=true&w=majority', { useNewUrlParser: true })
-    // .then(() => {
-    //     console.log('try mongodb connection');
-    // }).catch(err => {
-    //     console.log(err);
-    // }) 
+// .then(() => {
+//     console.log('try mongodb connection');
+// }).catch(err => {
+//     console.log(err);
+// }) 
 
 mongoose.connection.once('open', () => {
     console.log('database is connected with mongodb')
