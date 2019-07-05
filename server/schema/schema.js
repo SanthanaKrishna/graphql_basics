@@ -24,6 +24,11 @@ const Author = require('../models/author');
 //     { name: 'Terry Pratchett', age: 66, id: '3' }
 // ];
 
+/**
+ * define properties under type 
+ * @name: 'Book', is a type
+ * this is just design mock/schema
+ */
 const BookType = new GraphQLObjectType({
     name: 'Book',
     fields: () => ({
@@ -89,7 +94,7 @@ const RootQuery = new GraphQLObjectType({
                 return Book.find({}) //its return all of data using find({})
             }
         },
-        author: {
+        authors: {
             type: new GraphQLList(AuthorType),
             resolve(parent, args) {
                 //return authors; 
